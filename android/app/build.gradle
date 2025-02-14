@@ -1,0 +1,59 @@
+plugins {
+    id "com.android.application"
+    // START: FlutterFire Configuration
+    id 'com.google.gms.google-services' // Apply Google services plugin here
+    // END: FlutterFire Configuration
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.groceryapp"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId = "com.example.groceryapp"
+        minSdk = flutter.minSdkVersion
+        targetSdk = flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+        minSdkVersion 23
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+// Add Firebase dependencies
+dependencies {
+    implementation 'com.google.firebase:firebase-auth:21.0.5'  // Firebase Auth
+    implementation 'com.google.firebase:firebase-firestore:24.0.3'  // Firestore
+    implementation 'com.google.firebase:firebase-storage:20.0.0'  // Storage
+    implementation 'com.google.firebase:firebase-messaging:23.1.0'  // Messaging
+    implementation 'com.google.firebase:firebase-crashlytics:18.2.1'  // Crashlytics
+
+    // Make sure you have the classpath for Google services here (in the project-level build.gradle)
+    // classpath 'com.google.gms:google-services:4.3.15' // This line should go in project-level build.gradle (not here)
+   
+}
+
+// Apply Google Services Plugin (should only be at the bottom of the file)
+apply plugin: 'com.google.gms.google-services'  // This should be only once at the bottom
