@@ -1,16 +1,23 @@
-# groceryapp
+🛒 User Grocery App
+A voice-enabled grocery shopping mobile app built using Flutter (Dart), integrated with Supabase and Firebase for backend services. The app allows users to navigate, search, authenticate, and manage grocery tasks using voice commands—making the experience hands-free and efficient.
 
-A new Flutter project.
+🌐 Tech Stack
+Flutter / Dart — Cross-platform mobile UI framework
 
-## Getting Started
+Supabase — Used for relational database management, authentication, and real-time updates
 
-This project is a starting point for a Flutter application.
+Firebase — Used for services like authentication, Firestore, or storage
 
-A few resources to get you started if this is your first Flutter project:
+🚀 Key Features
+🎙️ Voice-based control: Navigate the app, handle authentication, and interact with features using voice commands
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+🔐 User authentication via Supabase or Firebase
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+🛍️ Browse grocery items
+
+🧺 Add to cart and manage shopping list
+
+🔄 Real-time or persistent state management with Supabase/Firebase
+
+🎥 Demo Video
+📽 Watch Demo
